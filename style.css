@@ -1225,7 +1225,7 @@ img {
     }
     .sh {
         aspect-ratio: 4/3;
-        padding: 8px 8px 8px;
+        padding: 28px 8px 8px;
         border-radius: 12px;
     }
     .sh::before {
@@ -1250,5 +1250,62 @@ img {
         width: 100%;
         max-height: 70vh;
         object-fit: contain;
+    }
+}
+
+
+/* ===== works gallery: fixed, consistent image frames ===== */
+
+.wk {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.wk article {
+    min-width: 0;
+}
+
+.sh {
+    aspect-ratio: 4/3;
+    padding: 0;
+}
+
+.sh img {
+    position: absolute;
+    top: 22px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 22px);
+    max-width: none;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 0;
+}
+
+@media (max-width: 860px) {
+    .wk {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 560px) {
+    .wk {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
+        max-width: 420px;
+        margin-inline: auto;
+    }
+    .sh {
+        padding: 0;
+        border-radius: 12px;
+    }
+    .sh::before {
+        height: 20px;
+    }
+    .sh img {
+        top: 20px;
+        height: calc(100% - 20px);
+        border-radius: 0;
     }
 }
