@@ -33,8 +33,24 @@
     { id: 'bac', cat: 'tech', sy: 1, t: 'منصة الشهادة الثانوية', s: 'أخضر هادئ', d: 'مواد ووحدات وملخصات واختبارات تجريبية مع متابعة التقدم.', n: 'الطالب يحتاج خطة مراجعة واختبارات في مكان واحد، وتعمل بسرعة على إنترنت ضعيف.', p: ['المواد والوحدات', 'الدروس', 'اختبارات تجريبية', 'متابعة التقدم', 'تحميل للمراجعة دون اتصال'],
       m: N('بكالوريا', ['المواد', 'اختبارات']) + H('راجع بخطة واضحة') + P(['رياضيات', 'فيزياء', 'كيمياء'], 1) + M([['الوحدة 1', 90], ['الوحدة 2', 55], ['الوحدة 3', 20]]) },
     { id: 'jobs', cat: 'services', sy: 1, t: 'فرص عمل وعمل عن بعد', s: 'داكن بأخضر زمردي', d: 'وظائف محلية وعن بعد، وملف للمتقدم ولوحة لصاحب العمل.', n: 'كثير من الخريجين والمستقلين لا يجدون منصة تجمعهم بأصحاب العمل.', p: ['قائمة الوظائف', 'تفاصيل وظيفة', 'ملف المتقدم', 'لوحة صاحب العمل', 'قسم المستقلين'],
-      m: N('شغلك', ['الوظائف', 'مستقلون']) + H('وظيفتك التالية قريبة') + R([['مطوّر واجهات', 'عن بعد'], ['محاسب', 'دمشق'], ['مصمم جرافيك', 'حلب']]) + B('قدّم الآن') }
+      m: N('شغلك', ['الوظائف', 'مستقلون']) + H('وظيفتك التالية قريبة') + R([['مطوّر واجهات', 'عن بعد'], ['محاسب', 'دمشق'], ['مصمم جرافيك', 'حلب']]) + B('قدّم الآن') },
+    { id: 'pharm', cat: 'services', sy: 1, t: 'صيدليات مناوبة وأدوية', s: 'رمادي فاتح وسماوي', d: 'البحث عن أقرب صيدلية مناوبة وعن توفر دواء معيّن قبل الذهاب.', n: 'الناس تتنقل من صيدلية لأخرى بحثاً عن دواء أو صيدلية مفتوحة ليلاً.', p: ['الصيدليات المناوبة', 'البحث عن دواء', 'الخريطة', 'لوحة الصيدلية', 'تنبيه بتوفر الدواء'],
+      m: N('صيدلية قريبة', ['مناوبة', 'أدوية']) + H('أقرب صيدلية مفتوحة الآن') + R([['صيدلية الشفاء', 'مفتوحة'], ['صيدلية الأمل', 'مناوبة الليلة'], ['صيدلية النور', 'تغلق 9م']]) + B('ابحث عن دواء') },
+    { id: 'bus', cat: 'services', sy: 1, t: 'حجز باصات بين المحافظات', s: 'أزرق سماوي', d: 'جدول رحلات وحجز مقعد ودفع، مع لوحة لشركة النقل.', n: 'الحجز غالباً بالهاتف أو بالوقوف في الكراج، فتضيع المقاعد والمواعيد.', p: ['الوجهات والمواعيد', 'اختيار المقعد', 'الدفع والتذكرة', 'حجوزاتي', 'لوحة شركة النقل'],
+      m: N('رحلتي', ['الوجهات', 'حجوزاتي']) + H('احجز مقعدك بين المحافظات') + R([['دمشق ← حلب', '8:00 ص'], ['دمشق ← حمص', '10:30 ص'], ['دمشق ← اللاذقية', '2:00 م']]) + B('اختر المقعد') },
+    { id: 'wholesale', cat: 'commerce', sy: 1, t: 'سوق الجملة للتجار', s: 'زيتوني هادئ', d: 'كتالوج بالجملة بأسعار حسب الكمية وطلب عرض سعر سريع.', n: 'صاحب المحل يتصل بعدة موردين كل يوم ليعرف الأسعار والكميات المتاحة.', p: ['الأقسام', 'أسعار حسب الكمية', 'طلب عرض سعر', 'حسابات التجار', 'لوحة المورّد'],
+      m: N('الجملة', ['الأقسام', 'عرض سعر']) + H('اطلب بالجملة بأسعار واضحة') + R([['سكر 50 كغ', 'من 40 كيساً'], ['زيت 18 لتر', 'من 20 علبة'], ['أرز 25 كغ', 'من 30 كيساً']]) + B('اطلب عرض سعر') },
+    { id: 'qrmenu', cat: 'commerce', sy: 1, t: 'مطعم وقائمة طعام QR', s: 'عنابي وذهبي', d: 'قائمة طعام يفتحها الزبون بمسح رمز، مع طلب من الطاولة.', n: 'طباعة القوائم مكلفة وتتغير الأسعار باستمرار، والقائمة الرقمية تُعدَّل في لحظة.', p: ['القائمة', 'تفاصيل الصنف', 'طلب من الطاولة', 'لوحة المطعم', 'رمز QR للطباعة'],
+      m: N('مطعم الياسمين', ['القائمة', 'تواصل']) + H('قائمة طعام بمسح الرمز') + P(['مقبلات', 'رئيسية', 'حلويات'], 1) + R([['كبة مشوية', '6 $'], ['كباب حلبي', '9 $']]) + B('اطلب من الطاولة') },
+    { id: 'charity', cat: 'services', sy: 1, t: 'جمعية خيرية وتبرعات', s: 'وردي دافئ', d: 'مشاريع خيرية مع شريط تقدّم وتبرع آمن وتقارير واضحة.', n: 'المتبرع يريد أن يرى أين ذهب تبرعه، والجمعية تحتاج ثقة موثّقة.', p: ['المشاريع', 'صفحة مشروع', 'التبرع', 'تقارير الصرف', 'التطوع'],
+      m: N('يد بيد', ['المشاريع', 'تبرّع']) + H('تبرّعك يصل إلى مستحقه') + M([['كفالة أيتام', 70], ['سلة غذائية', 45], ['تدفئة', 25]]) + B('تبرّع الآن') },
+    { id: 'garage', cat: 'services', sy: 1, t: 'ورشة صيانة سيارات', s: 'داكن وأصفر', d: 'حجز موعد وتتبع حالة الإصلاح وسجل صيانة لكل سيارة.', n: 'الزبون لا يعرف حالة سيارته ولا كلفة الإصلاح إلا بالاتصال بالورشة.', p: ['حجز موعد', 'تتبع حالة السيارة', 'عروض الأسعار', 'سجل الصيانة', 'لوحة الورشة'],
+      m: N('ورشة الأمانة', ['الخدمات', 'حجز']) + H('تابع إصلاح سيارتك لحظة بلحظة') + M([['فحص', 100], ['قطع', 60], ['تسليم', 20]]) + B('احجز موعداً') }
   ];
+
+  var ORDER = ['clinic', 'rates', 'solar', 'gym', 'food', 'estate', 'cars', 'store', 'bac', 'pharm', 'bus', 'codex', 'wholesale', 'qrmenu', 'course', 'charity', 'garage', 'jobs'];
+  S = ORDER.map(function (i) { return S.filter(function (x) { return x.id === i; })[0]; });
+  var LIMIT = 9, filter = 'all', expanded = false;
 
   var grid = document.getElementById('gx-grid');
   if (!grid) return;
@@ -43,9 +59,40 @@
     byId[x.id] = x;
     return '<article class="gx-card" data-cat="' + x.cat + '" data-sy="' + (x.sy ? 1 : 0) + '">' +
       '<div class="gx-frame" aria-hidden="true"><div class="gx-bar"><i></i><i></i><i></i></div><div class="gx-mock gx-t-' + x.id + '">' + x.m + '</div></div>' +
-      '<div class="gx-meta"><h3><button type="button" class="gx-open" data-id="' + x.id + '">' + x.t + '</button></h3><span>' + x.s + '</span>' +
-      (x.sy ? '<em class="gx-tag">للسوق السوري</em>' : '') + '</div></article>';
+      '<div class="gx-meta"><div class="gx-top"><h3><button type="button" class="gx-open" data-id="' + x.id + '">' + x.t + '</button></h3>' +
+      (x.sy ? '<em class="gx-tag">للسوق السوري</em>' : '') + '</div><span class="gx-sub">' + x.s + '</span><p class="gx-desc">' + x.d + '</p></div></article>';
   }).join('');
+
+  var cards = grid.querySelectorAll('.gx-card');
+  var more = document.getElementById('gx-more');
+  var chips = document.querySelectorAll('.gx-chip');
+  function matches(k) { return filter === 'all' || (filter === 'sy' ? k.dataset.sy === '1' : k.dataset.cat === filter); }
+  chips.forEach(function (c) {
+    var f = c.dataset.f, n = 0;
+    cards.forEach(function (k) { if (f === 'all' || (f === 'sy' ? k.dataset.sy === '1' : k.dataset.cat === f)) n++; });
+    c.insertAdjacentHTML('beforeend', ' <span class="gx-n">' + n + '</span>');
+  });
+  function apply() {
+    var shown = 0;
+    cards.forEach(function (k) {
+      var ok = matches(k);
+      if (ok && filter === 'all' && !expanded) { shown++; ok = shown <= LIMIT; }
+      k.hidden = !ok;
+    });
+    if (more) {
+      more.hidden = !(filter === 'all' && !expanded);
+      more.textContent = 'عرض كل الأعمال (' + cards.length + ')';
+    }
+  }
+  chips.forEach(function (c) {
+    c.addEventListener('click', function () {
+      chips.forEach(function (o) { o.setAttribute('aria-pressed', o === c ? 'true' : 'false'); });
+      filter = c.dataset.f;
+      apply();
+    });
+  });
+  if (more) more.addEventListener('click', function () { expanded = true; apply(); });
+  apply();
 
   var dlg = document.getElementById('gd');
   grid.addEventListener('click', function (e) {
@@ -73,17 +120,6 @@
   dlg.querySelector('.gx-x').addEventListener('click', function () { dlg.close(); });
   dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
   document.getElementById('gd-c').addEventListener('click', function () { dlg.close(); });
-
-  var chips = document.querySelectorAll('.gx-chip');
-  chips.forEach(function (c) {
-    c.addEventListener('click', function () {
-      chips.forEach(function (o) { o.setAttribute('aria-pressed', o === c ? 'true' : 'false'); });
-      var f = c.dataset.f;
-      grid.querySelectorAll('.gx-card').forEach(function (k) {
-        k.hidden = !(f === 'all' || (f === 'sy' ? k.dataset.sy === '1' : k.dataset.cat === f));
-      });
-    });
-  });
 
   /* mobile menu: close after choosing a link or tapping outside */
   var mm = document.querySelector('.mm');
