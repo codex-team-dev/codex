@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Codex | فريق برمجة المواقع والتطبيقات</title>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Readex+Pro:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700&family=Tajawal:wght@500;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Readex+Pro:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,8 +13,9 @@
     <header>
         <div class="w nav">
             <a href="#" class="brand"><i class="logo"></i><span>Codex</span></a>
-            <nav><a href="#services">الخدمات</a><a href="#works">الأعمال</a><a href="#process">آلية العمل</a><a href="#plans">الباقات</a><a href="#reviews">آراء العملاء</a><a href="#contact">تواصل</a></nav>
+            <nav><a href="#services">الخدمات</a><a href="#works">معرض التصاميم</a><a href="#process">آلية العمل</a><a href="#plans">الباقات</a><a href="#reviews">آراء العملاء</a><a href="#contact">تواصل</a></nav>
             <a href="#consult" class="btn">احجز استشارة</a>
+            <details class="mm"><summary aria-label="القائمة"></summary><div class="mm-p"><a href="#services">الخدمات</a><a href="#works">معرض التصاميم</a><a href="#process">آلية العمل</a><a href="#plans">الباقات</a><a href="#reviews">آراء العملاء</a><a href="#contact">تواصل</a></div></details>
         </div>
     </header>
 
@@ -91,33 +92,19 @@
         </section>
 
         <section id="works" class="alt">
-            <div class="w ra">
-                <h2>أعمال نفخر بها</h2>
-                <p class="lead">نماذج حقيقية من مشاريعنا، مع صور المشروع وملف PDF مفصّل لكل عمل.</p>
-                <div class="fl" id="fl">
-                    <label class="chip"><input type="radio" name="fl" value="all" checked><span>الكل</span></label>
-                    <label class="chip"><input type="radio" name="fl" value="store"><span>متاجر</span></label>
-                    <label class="chip"><input type="radio" name="fl" value="edu"><span>تعليم</span></label>
-                    <label class="chip"><input type="radio" name="fl" value="trade"><span>تداول</span></label>
-                    <label class="chip"><input type="radio" name="fl" value="app"><span>تطبيقات</span></label>
+            <div class="w">
+                <h2>معرض التصاميم</h2>
+                <p class="lead">اثنا عشر تصميماً لمواقع مختلفة، منها مواقع يحتاجها السوق في سوريا. اضغط على أي تصميم لتراه أكبر مع صفحاته. المعاينات توضيحية والأرقام فيها أمثلة.</p>
+                <div class="gx-chips" role="group" aria-label="تصفية التصاميم">
+                    <button type="button" class="gx-chip" data-f="all" aria-pressed="true">الكل</button>
+                    <button type="button" class="gx-chip" data-f="sy" aria-pressed="false">للسوق السوري</button>
+                    <button type="button" class="gx-chip" data-f="services" aria-pressed="false">خدمات</button>
+                    <button type="button" class="gx-chip" data-f="commerce" aria-pressed="false">تجارة</button>
+                    <button type="button" class="gx-chip" data-f="tech" aria-pressed="false">تقنية وتعليم</button>
                 </div>
-                <div class="wk" id="wk">
-                    <article data-t="store" data-pdf="works/fashion-store.pdf">
-                        <div class="sh"><img src="works/fashion-store.jpg" width="400px" height="300px"></div>
-                        <h3>متجر أزياء</h3><small>متجر إلكتروني · دفع وشحن</small></article>
-                    <article data-t="edu" data-img="works/learning-academy.jpg" data-pdf="works/learning-academy.pdf">
-                        <div class="sh"><img src="works/learning-academy.png" alt="" width="400px" height="300px"></div>
-                        <h3>أكاديمية تعلّم</h3><small>منصة تعليمية · فيديو وشهادات</small></article>
-                    <article data-t="app" data-img="works/delivery-app.jpg" data-pdf="works/delivery-app.pdf">
-                        <div class="sh"><img src="works/t.png" alt="" width="400px" height="300px"></div>
-                        <h3>تطبيق توصيل</h3><small>تطبيق جوال · تتبع مباشر</small></article>
-                    <article data-t="store" data-img="works/electronics-store.jpg" data-pdf="works/electronics-store.pdf">
-                        <div class="sh"><img src="works/m.png" alt="" width="400px" height="300px"></div>
-                        <h3>متجر إلكترونيات</h3><small>متجر إلكتروني · لوحة مخزون</small></article>
-                    <article data-t="app" data-img="works/clinic-booking.jpg" data-pdf="works/clinic-booking.pdf">
-                        <div class="sh"><img src="works/a.png" alt="" width="400px" height="300px"></div>
-                        <h3>نظام حجوزات عيادة</h3><small>تطبيق وويب · تذكيرات</small></article>
-                </div>
+                <div class="gx-grid" id="gx-grid"></div>
+                <!-- empty placeholders so the old script.js (works filter / lightbox) finds its elements -->
+                <div id="fl" hidden></div><div id="wk" hidden></div>
             </div>
         </section>
 
@@ -191,7 +178,7 @@
                         <p>بنوا منصتنا التعليمية بدعم ممتاز، وارتفعت مبيعات الدورات بوضوح.</p>
                     </div>
                     <div class="q">
-                        <p>فهموا متطلبات واجهة التداول المعقدة ونفذوها بدقة.</div>
+                        <p>فهموا متطلبات واجهة التداول المعقدة ونفذوها بدقة.</p></div>
                 </div>
             </div>
         </section>
@@ -231,7 +218,7 @@
                 </div>
             </div>
         </section>
-        <a class="wa" href="https://wa.me/0995560674" target="_blank" rel="noopener">واتساب</a>
+        <a class="wa" href="https://wa.me/963995560674" target="_blank" rel="noopener">واتساب</a>
     </main>
 
     <main id="consult">
@@ -270,7 +257,7 @@
                         <div class="f"><label class="l" for="n">الاسم</label><input class="i" id="n" autocomplete="name">
                             <div class="er"></div>
                         </div>
-                        <div class="f"><label class="l" for="p">رقم الهاتف</label><input class="i" id="p" type="tel" dir="ltr" placeholder="+966 5X XXX XXXX" autocomplete="tel">
+                        <div class="f"><label class="l" for="p">رقم الهاتف</label><input class="i" id="p" type="tel" dir="ltr" placeholder="+963 9XX XXX XXX" autocomplete="tel">
                             <div class="er"></div>
                         </div>
                         <div class="f"><label class="l" for="c">مكان السكن</label><input class="i" id="c" placeholder="الدولة / المدينة">
@@ -292,8 +279,24 @@
         </div>
     </main>
     <dialog id="lb"><button type="button" class="x" aria-label="إغلاق">×</button><img alt=""></dialog>
+    <dialog id="gd" aria-labelledby="gd-t">
+        <button type="button" class="gx-x" aria-label="إغلاق">×</button>
+        <div class="gx-d">
+            <div class="gx-dv" id="gd-m"></div>
+            <div class="gx-ds">
+                <h3 id="gd-t"></h3>
+                <p id="gd-d"></p>
+                <div id="gd-n" hidden></div>
+                <b>الصفحات</b>
+                <ul id="gd-l"></ul>
+                <div class="gx-sw" id="gd-s" aria-hidden="true"></div>
+                <a href="#consult" class="btn" id="gd-c">اطلب تصميماً مثل هذا</a>
+            </div>
+        </div>
+    </dialog>
     <footer>© 2026 Codex. جميع الحقوق محفوظة.</footer>
     <script src="script.js"></script>
+    <script src="gallery.js"></script>
 </body>
 
 </html>
