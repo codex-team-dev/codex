@@ -1884,3 +1884,144 @@ html {
         display: block;
     }
 }
+
+
+/* ===== gallery: tidy layout (18 works) ===== */
+
+.gx-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.gx-meta {
+    flex: 1;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    padding: 16px 18px 18px;
+}
+
+.gx-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.gx-meta h3 {
+    flex-basis: auto;
+    font-size: 17px;
+}
+
+.gx-tag {
+    flex: none;
+    white-space: nowrap;
+}
+
+.gx-sub {
+    color: var(--ice);
+    font-size: 13px;
+}
+
+.gx-desc {
+    color: var(--mu);
+    font-size: 14px;
+    line-height: 1.7;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.gx-n {
+    opacity: 0.6;
+    font-size: 12px;
+}
+
+.gx-more {
+    display: flex;
+    justify-content: center;
+    margin-top: 28px;
+}
+
+.gx-more[hidden],
+.gx-more button[hidden] {
+    display: none;
+}
+
+@media (max-width: 560px) {
+    .gx-chips {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        margin-inline: -16px;
+        padding-inline: 16px;
+        scrollbar-width: none;
+    }
+    .gx-chip {
+        flex: none;
+        white-space: nowrap;
+    }
+    .gx-more .btn {
+        width: 100%;
+    }
+}
+
+.gx-t-pharm {
+    --g-bg: #f1f5f9;
+    --g-ink: #0f172a;
+    --g-ac: #0891b2;
+    --g-on: #fff;
+    --g-soft: #cffafe;
+    --g-font: "Readex Pro", sans-serif;
+    --g-rad: 12px;
+}
+
+.gx-t-bus {
+    --g-bg: #e0f2fe;
+    --g-ink: #0c4a6e;
+    --g-ac: #0369a1;
+    --g-on: #fff;
+    --g-soft: #bae6fd;
+    --g-font: "Cairo", sans-serif;
+    --g-rad: 10px;
+}
+
+.gx-t-wholesale {
+    --g-bg: #ecfccb;
+    --g-ink: #1a2e05;
+    --g-ac: #3f6212;
+    --g-on: #fff;
+    --g-soft: #d9f99d;
+    --g-font: "Tajawal", sans-serif;
+    --g-rad: 4px;
+}
+
+.gx-t-qrmenu {
+    --g-bg: #2a0e14;
+    --g-ink: #fce9d6;
+    --g-ac: #f4b860;
+    --g-on: #2a0e14;
+    --g-soft: #44181f;
+    --g-font: "Tajawal", sans-serif;
+    --g-rad: 20px;
+}
+
+.gx-t-charity {
+    --g-bg: #fff1f2;
+    --g-ink: #4c0519;
+    --g-ac: #be123c;
+    --g-on: #fff;
+    --g-soft: #ffe4e6;
+    --g-font: "IBM Plex Sans Arabic", sans-serif;
+    --g-rad: 16px;
+}
+
+.gx-t-garage {
+    --g-bg: #18181b;
+    --g-ink: #fafafa;
+    --g-ac: #facc15;
+    --g-on: #18181b;
+    --g-soft: #27272a;
+    --g-font: "Cairo", sans-serif;
+    --g-rad: 6px;
+}
